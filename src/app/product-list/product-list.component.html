@@ -2,7 +2,8 @@
 <div style="background-color:silver"
 *ngFor="let productOuter of products">
 <!-- Id:{{product.id}}<br/> -->
-<a [title]="productOuter.name +' details'">
+<a [title]="productOuter.name +' details'"
+[routerLink]="['/products', productOuter.id]">
   {{productOuter.name}}</a><br/>
 
 <p *ngIf="productOuter.description">

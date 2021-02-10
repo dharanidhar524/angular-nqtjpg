@@ -21,6 +21,7 @@ product;
     //get the product with productId
     this.product = products.find(product => product.id === 
     productIdFromRoute)
+    console.log(this.product)
   }
 
 }

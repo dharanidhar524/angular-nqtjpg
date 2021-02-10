@@ -9,14 +9,16 @@
  Description: {{productOuter.description}}
 </p>
 
-<button (click)="share()">
-  share
-</button>
 <!-- Price:{{product.price}}<br/> -->
 <!-- Description:{{product.description}}<br/> -->
 <hr/>
+<button (click)="share()">
+  Share
+</button>
 <!-- angular selector -->
-<app-product-alerts [productInner]="productOuter">
+<app-product-alerts
+ [productInner]="productOuter"
+ (notify)="Notify()">
 
 </app-product-alerts>
 </div>

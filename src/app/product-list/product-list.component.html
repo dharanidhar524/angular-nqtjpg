@@ -1,12 +1,12 @@
 <h2>Products List</h2>
 <div style="background-color:silver"
-*ngFor="let product of products">
+*ngFor="let productOuter of products">
 <!-- Id:{{product.id}}<br/> -->
-<a [title]="product.name +' details'">
-  {{product.name}}</a><br/>
+<a [title]="productOuter.name +' details'">
+  {{productOuter.name}}</a><br/>
 
-<p *ngIf="product.description">
- Description: {{product.description}}
+<p *ngIf="productOuter.description">
+ Description: {{productOuter.description}}
 </p>
 
 <button (click)="share()">
@@ -15,9 +15,11 @@
 <!-- Price:{{product.price}}<br/> -->
 <!-- Description:{{product.description}}<br/> -->
 <hr/>
+<!-- angular selector -->
+<app-product-alerts [productInner]="productOuter">
 
+</app-product-alerts>
 </div>
-
 
 <!-- 
 Copyright Google LLC. All Rights Reserved.
